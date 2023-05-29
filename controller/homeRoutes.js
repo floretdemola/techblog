@@ -9,10 +9,9 @@ router.get('/', async (req, res) => {
         });
     const posts = postData.map((post) => post.get({ plain: true }));
 
-    res.render('homepage', {
-        posts,
-        logged_in: req.session.logged_in
-    });
+    res.render('all-posts', {
+        posts
+      });
     } catch (err) {
       res.status(500).json(err);
     }
@@ -33,7 +32,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
       if (postData) {
       const post = postData.get({ plain: true });
       console.log(post);
-      res.render('single-post', { post, logged_in: req.session.logged_in });
+      res.render('single-post', { post });
       } else {
         res.status(404).json({ message: 'No post found with this id' });
         }
@@ -45,7 +44,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
 router.get('/login', async (req, res) => {
     try {
         if (req.session.logged_in) {
-          res.redirect('/dashboard');
+          res.redirect('/');
           return;
         }
         res.render('login');
@@ -57,7 +56,7 @@ router.get('/login', async (req, res) => {
 router.get('/signup', async (req, res) => {
   try {
     if (req.session.logged_in) {
-      res.redirect('/dashboard');
+      res.redirect('/');
       return;
       }
       res.render('signup');
