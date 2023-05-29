@@ -6,17 +6,16 @@ const withAuth = require('../../utils/auth');
 // new post
 router.post('/', withAuth, async (req, res) => {
     try {
-        const body = req.body;
-        const newPost = await Post.create(
-        { 
-         ...body, userID: req.session.userID,
-        });
-
-        req.statusCode(200).json(newPost);
-        } catch (err) {
-            res.status(500).json(err);
-        }
-});
+      const newPost = await Post.create({
+        ...req.body,
+        userId: req.session.userId,
+      });
+  
+      res.status(200).json(newPost);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 
 // update post
 router.put('/:id', withAuth, async (req, res) => {
@@ -56,3 +55,5 @@ router.delete('/:id', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+module.exports = router;

@@ -12,7 +12,13 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Set up Handlebars.js engine with custom helpers
-const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create({ 
+  helpers,
+  defaultLayout: 'main',
+  extname: 'handlebars',
+  layoutsDir: path.join(__dirname, 'views', 'layouts'),
+  partialsDir: path.join(__dirname, 'views', 'partials')
+ });
 
 const sess = {
   secret: 'Super secret secret',
@@ -35,12 +41,20 @@ app.use(session(sess));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
-});
+async function startServer() {
+  try {
+    await sequelize.sync({ force: false });
+    app.listen(PORT, () => console.log('Now listening'));
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+startServer();
