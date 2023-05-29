@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS scriptscout_db;
-CREATE DATABASE scriptscout_db;
+DROP DATABASE IF EXISTS techblog_db;
+CREATE DATABASE techblog_db;
