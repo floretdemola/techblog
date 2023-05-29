@@ -8,11 +8,11 @@
     </head>
 
   <body>
-        <nav>
+        <nav class="navbar">
             <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/dashboard">Dashboard</a></li>
-              <li>
+              <li class="li-inline nav-item"><a href="/">Home</a></li>
+              <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
+              <li class="li-inline nav-item">
                 {{#if logged_in}}
                 <a href="/profile">Profile</a>
                   <button class="no-button" id="logout">Logout</button>
