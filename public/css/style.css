@@ -1,0 +1,13 @@
+:root {
+    --primary: #ccdad1;
+    --secondary: #927676;
+    --tertiary: #89dee2;
+    --light: #645252;
+    --dark: #1a1a1a;
+    --border-radius: 0.3rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+

@@ -1,0 +1,18 @@
+
+[
+  {
+    "postTitle": "BTC Flip",
+    "postContent": "I have a mobile app idea: Anyone want to create a game for Windows and macOS where players can invest in the crypto market, but the app will make the decision for you with a coinflip! Heads you buy, tails you sell!",
+    "userId": 1
+  },
+  {
+    "postTitle": "Star Wars Expanded Universe App",
+    "postContent": "I love the stories and world of the expanded Universe, pre-Disney era of course!",
+    "userId": 2
+  },
+  {
+    "postTitle": "ORM",
+    "postContent": "Anyone else love ORM or just me?",
+    "userId": 3
+  }
+]
