@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Humble",
+    "description": "A mobile app where you can get together and humble each other. Post a selfie and the comment with the best roast wins imaginary points.",
+    "needed_funding": 500000
+  },
+  {
+    "name": "Star Wars Expanded Universe App",
+    "description": "An app for Star Wars fans where can explore the stories and world of the expanded Univser, pre-Disney era. Funding will also support the future law suit that we will face once Mickey discovers this app.",
+    "needed_funding": 10000000
+  },
+  {
+    "name": "BTC Flip",
+    "description": "A game for Windows and macOS where players can invest in the crypto market, but the app will make the decision for you with a coinflip! Heads you buy, tails you sell!",
+    "needed_funding": 8000
+  }
+]
