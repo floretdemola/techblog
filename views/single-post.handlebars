@@ -10,14 +10,14 @@
             {{post.content}}
         </div>
     </article>
-    {{#if post.Comment}}
+    {{#if comment.content}}
     <section class="card">
         <div class="card-header">
             <h3>Comments</h3>
         </div>
 
         <div class="card-body">
-            {{#each post.Comment}}
+            {{#each comment.content}}
             <div>
                 <p>{{body}}</p>
                 <p>Posted by {{user.username}} on {{format_date this.createdAt}}</p>
