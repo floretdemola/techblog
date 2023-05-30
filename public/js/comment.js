@@ -17,7 +17,7 @@ const commentFormHandler = async function(event){
 };
     
 const deleteClickHandler = async function() {
-        await fetch('api/comment', {
+        await fetch('/api/comment', {
             method: 'DELETE'
         });
     document.location.reload();
