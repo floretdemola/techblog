@@ -23,5 +23,5 @@ const deleteClickHandler = async function() {
     document.location.reload();
 };
     
-document.querySelector('#edit-post-form').addEventListener('submit', commentFormHandler);
+document.querySelector('#new-comment-form').addEventListener('submit', commentFormHandler);
 document.querySelector('#delete-btn').addEventListener('click', deleteClickHandler);
