@@ -8,12 +8,12 @@ const commentFormHandler = async function(event){
             method: 'POST',
             body: JSON.stringify({
                 user_id,
-                content
+                content,
             }),
             headers: { 'Content-Type': 'application/json' },
         });
     
-    document.location.reload();
+     document.location.reload();
 };
     
 const deleteClickHandler = async function() {

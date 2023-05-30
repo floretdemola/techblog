@@ -12,8 +12,7 @@ Comment.init(
         },
     content: {
         type: DataTypes.STRING,
-        allowNull: false,
-        unique: true
+        allowNull: false        
         },
     date_created: {
         type: DataTypes.DATE,
