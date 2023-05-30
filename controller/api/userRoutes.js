@@ -5,6 +5,8 @@ const { User } = require('../../models');
 
 router.post('/', async (req, res) => {
     try {
+        console.log("poop");
+        
         const userData = await User.create({
             username: req.body.username,
             password: req.body.password

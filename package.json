@@ -7,9 +7,14 @@
     "express-handlebars": "^7.0.7",
     "express-session": "^1.17.3",
     "mysql2": "^3.3.2",
+    "nodemon": "^2.0.22",
     "sequelize": "^6.31.1"
   },
   "devDependencies": {
     "tailwindcss": "^3.3.2"
+  },
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   }
 }
