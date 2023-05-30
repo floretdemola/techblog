@@ -21,8 +21,10 @@
             <div>
                 <p>{{body}}</p>
                 <p>Posted by {{user.username}} on {{format_date this.createdAt}}</p>
+                <button type="delete" class="delete-btn">Delete</button>
             </div>
             {{/each}}
+            
         </div>
     </section>
     {{/if}}
@@ -36,8 +38,6 @@
             <label class="form-label" for="comment-body">Comment</label>
             <textarea name="comment-body" class="form-input"></textarea>
             <button type="submit" class="btn">Post</button>
-            <button type="delete" class="delete-btn">Delete</button>
-
         </div>
     </form>
 </div>
