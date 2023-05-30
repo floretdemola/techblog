@@ -7,7 +7,7 @@ const withAuth = require('../../utils/auth');
 router.get('/', async (req, res) => {
   try{
     const commentData = await Comment.findAll();
-    const comments = commentData.get({ plain: true });
+    const comments = commentData.map(comment => comment.get({ plain: true }));
 
     console.log(comments);
 
@@ -19,12 +19,15 @@ router.get('/', async (req, res) => {
 
 // post comment
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/:post_id', withAuth, async (req, res) => {
   try {
     const body = req.body;
+    const post_id = req.params;
+
     const newComment = await Comment.create({
       ...body,
       user_id: req.session.user_id,
+      post_id
     });
     res.json(newComment);
   } catch (err) {

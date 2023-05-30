@@ -10,18 +10,18 @@
             {{post.content}}
         </div>
     </article>
-    {{#if post.comment.content}}
+    {{#if post.Comments}}
     <section class="card">
         <div class="card-header">
             <h3>Comments</h3>
         </div>
 
         <div class="card-body">
-            {{#each post.comment.content}}
+            {{#each post.comments}}
             <div>
                 <p>{{body}}</p>
                 <p>Posted by {{user.username}} on {{format_date this.createdAt}}</p>
-                <button type="delete" class="delete-btn">Delete</button>
+                <button id="delete-btn"type="delete" class="delete-btn">Delete</button>
             </div>
             {{/each}}
             
