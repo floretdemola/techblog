@@ -3,16 +3,16 @@
   {
     "title": "BTC Flip",
     "content": "I have a mobile app idea: Anyone want to create a game for Windows and macOS where players can invest in the crypto market, but the app will make the decision for you with a coinflip! Heads you buy, tails you sell!",
-    "userId": 1
+    "user_id": 1
   },
   {
     "title": "Star Wars Expanded Universe App",
     "content": "I love the stories and world of the expanded Universe, pre-Disney era of course!",
-    "userId": 2
+    "user_id": 2
   },
   {
     "title": "ORM",
     "content": "Anyone else love ORM or just me?",
-    "userId": 3
+    "user_id": 3
   }
 ]
