@@ -1,122 +1,129 @@
 :root {
     --primary: #000000;
-    --secondary: #927676;
-    --tertiary: #89e2db;
-    --light: #fbcece;
+    --secondary: #bababa;
+    --tertiary: #595959;
+    --light: #808080;
     --dark: #1a1a1a;
     --border-radius: 0.3rem;
 }
-
+  
 * {
     box-sizing: border-box;
 }
-
+  
 body {
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     background-color: var(--dark);
     color: var(--light);
     font-size: 20px;
 }
-
+  
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     font-weight: 500;
     color: var(--primary);
 }
-
+  
 header {
     margin-top: 40px;
 }
-
+  
 main {
     margin: 0 auto;
     max-width: 960px;
     width: 95%;
 }
-
+  
 a {
     text-decoration: none;
 }
-
+  
 p {
     margin: 0;
     font-size: 1rem;
-}
+}  
 
 input {
     font-size: 1rem;
-    border: solid rgb(0, 0, 0);
+    border: 1px solid var(--primary);
     border-radius: var(--border-radius);
-    padding: 5px;
+    padding: 8px;
 }
-
+  
 .navbar {
     background-color: var(--dark);
     position: sticky;
     top: 0;
     width: 100%;
-}
-
+  }
+  
 .nav-item {
     color: var(--light);
     font-size: 1rem;
-    margin: 0 5px;
+    margin: 0 10px;
     display: inline;
 }
-
+  
 .card {
     border-radius: var(--border-radius);
     background-color: var(--light);
-    padding: 10px;
-    margin: 0 0 20px 0;
-    border: 3px solid (var(--dark));
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 3px solid var(--dark);
 }
-
+  
 .card-body {
-    padding: 2%;
+    padding: 20px;
 }
-
+  
 .card-header {
     font-size: 1.5rem;
-    padding: 1%;
+    padding: 10px;
     border-radius: var(--border-radius);
     background-color: var(--light);
 }
-
+  
 .card-header h2 {
     font-size: 2rem;
     color: var(--primary);
 }
-
+  
 .btn {
     font-size: 1rem;
-    padding: 5px;
+    padding: 8px 16px;
     border-radius: var(--border-radius);
-    border: solid var(--primary);
+    border: 2px solid var(--primary);
     color: var(--primary);
     background-color: var(--light);
-    display: block;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
 }
-
+  
+.btn:hover {
+    background-color: var(--primary);
+    color: var(--light);
+}
+  
 .form-label,
 .form-input,
 .form-textarea {
     display: block;
     width: 100%;
+    margin-bottom: 10px;
 }
-
+  
 .form-input {
-    margin: 5px 0;
-    padding: 1%;
+    padding: 8px;
+    border: 1px solid var(--primary);
     border-radius: var(--border-radius);
-    border: solid var(--primary);
     color: var(--primary);
     background-color: var(--light);
 }
-
+  
 .form-label {
     font-size: 1rem;
     color: var(--primary);
-    margin: 0 0 0 5px;
+    margin-left: 5px;
 }
